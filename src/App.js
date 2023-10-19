@@ -9,10 +9,8 @@ import { Menu } from "./componentes/Menu/Menu";
 function App() {
   return (
     <Router>
-      <header className="App-header">
-        <Menu />
-      </header>
-      <main>
+      <Menu />
+      <main className="main">
         <Routes>
           <Route path="/casas" element={<ChronologyPage />} />
           <Route path="/casas" element={<HousesPage />} />
