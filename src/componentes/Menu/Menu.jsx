@@ -2,19 +2,19 @@ import { Link } from "react-router-dom";
 
 export function Menu() {
   return (
-    <header className="header">
-      <Link to="" className="header-links">
+    <footer className="footer">
+      <Link to="" className="footer-links">
         Home
       </Link>
-      <Link to="/personajes" className="header-links">
+      <Link to="/personajes" className="footer-links">
         Personajes
       </Link>
-      <Link to="/casas" className="header-links">
+      <Link to="/casas" className="footer-links">
         Casas
       </Link>
-      <Link to="/Cronologia" className="header-links">
+      <Link to="/cronologia" className="footer-links">
         Cronologia
       </Link>
-    </header>
+    </footer>
   );
 }
