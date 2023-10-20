@@ -8,56 +8,33 @@
 
           .section {
 
-                    width: 95%;
-                    height: 85%;
-                    max-height: 75%;
+                    max-width: 100%;
+                    max-height: 95%;
                     display: grid;
                     place-items: center;
                     overflow-y: auto;
-                    grid-template-columns: repeat(5, 310px);
-                    gap: 50px;
-
-                    .section-article {
-
-                              width: 100%;
-                              height: 100%;
-
-                              .section-article-div {
-
-                                        position: relative;
-                                        display: inline-block;
-          
-                              }
-          
-                                        .section-article-div-img {
-          
-                                                  width: 248px;
-                                                  height: 320px;
-                                                  object-fit: cover;
-          
-                                        }
-                                      
-                                        .section-article-div-span {
-          
-                                                  position: absolute;
-                                                  bottom: 0;
-                                                  left: 0;
-                                                  background-color: rgba(0, 0, 0, 0.7);
-                                                  color: white;
-                                                  padding: 5px;
-                                                  width: 100%;
-                                                  text-align: center;
-                                                  visibility: hidden;
-                                                  opacity: 0;
-                                                  transition: visibility 0s, opacity 0.3s ease;
-          
-                                        }
-                                      
-                              .section-article-div:hover .section-article-div-span {
-          
-                                        visibility: visible;
-                                        opacity: 1;
-                              }
+                    grid-template-columns: repeat(5, 260px);
+                    gap: 45px;
+                    
+                    &::-webkit-scrollbar {
+                    
+                              width: 10px;
+                    
                     }
+                    
+                    &::-webkit-scrollbar-thumb {
+                    
+                              background-color: #666;
+                              border-radius: 10px;
+                    }
+                    
+                    &::-webkit-scrollbar-track {
+                    
+                              background-color: #222;
+                    
+                    }
+          
+                    @import "./sub_blocks/articles-characters";
+                    @import "./sub_blocks/article-character-info";
           }
 }
