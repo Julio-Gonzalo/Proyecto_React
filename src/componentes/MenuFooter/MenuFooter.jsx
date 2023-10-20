@@ -1,24 +1,29 @@
+import React from 'react';
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
-export function Menu() {
+
+export function MenuFooter() {
+  const [ t, ] = useTranslation("global");
+ 
+
+
+
   return (
     <>
-      {/* <header>
-        <Link to="" className="header-link">
-          <img />
-        </Link>
-      </header> */}
+      
 
       <footer className="footer">
         <Link to="/personajes" className="footer-links">
-          Personajes
+        {t('main.menuCharacters')}
         </Link>
         <Link to="/casas" className="footer-links">
-          Casas
+        {t('main.menuHouses')}
         </Link>
         <Link to="/cronologia" className="footer-links">
-          Cronologia
+        {t('main.menuTimeline')}
         </Link>
+        
       </footer>
     </>
   );

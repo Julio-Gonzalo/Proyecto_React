@@ -4,11 +4,13 @@ import { ChronologyPage } from "./page/ChronologyPage/ChronologyPage";
 import { HousesPage } from "./page/HousesPage/HousesPage";
 import { CharactersPage } from "./page/CharactersPage/CharactersPage";
 import { HomePage } from "./page/HomePage/HomePage";
-import { Menu } from "./componentes/Menu/Menu";
+import { MenuFooter } from "./componentes/MenuFooter/MenuFooter";
+import {MenuHeader} from "./componentes/MenuHeader/MenuHeader";
 
 function App() {
   return (
     <Router>
+    <MenuHeader/>
       <main className="main">
         <Routes>
           <Route path="/cronologia" element={<ChronologyPage />} />
@@ -17,7 +19,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
         </Routes>
       </main>
-      <Menu />
+      
+      <MenuFooter/>
     </Router>
   );
 }
