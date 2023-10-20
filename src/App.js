@@ -9,15 +9,15 @@ import { Menu } from "./componentes/Menu/Menu";
 function App() {
   return (
     <Router>
-      <Menu />
       <main className="main">
         <Routes>
-          <Route path="/casas" element={<ChronologyPage />} />
+          <Route path="/cronologia" element={<ChronologyPage />} />
           <Route path="/casas" element={<HousesPage />} />
           <Route path="/personajes" element={<CharactersPage />} />
           <Route path="/" element={<HomePage />} />
         </Routes>
       </main>
+      <Menu />
     </Router>
   );
 }
