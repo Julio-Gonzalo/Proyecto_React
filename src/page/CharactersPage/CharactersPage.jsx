@@ -15,8 +15,8 @@ export function CharactersPage() {
   }, []);
 
   return (
-    <div>
+    <section className="section">
       <Gallery data={characters} />
-    </div>
+    </section>
   );
 }
