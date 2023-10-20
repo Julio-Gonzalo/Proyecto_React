@@ -21,4 +21,30 @@
 .header .header-links {
   color: white;
   padding-right: 5%;
+}
+
+.main {
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.main .section {
+  width: 95%;
+  height: 85%;
+  max-height: 70%;
+  display: grid;
+  place-items: center;
+  overflow-y: auto;
+  grid-template-columns: repeat(5, 310px);
+  gap: 50px;
+}
+.main .section .section-article .section-article-img {
+  width: 248px;
+  height: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: aqua;
 }/*# sourceMappingURL=style.css.map */

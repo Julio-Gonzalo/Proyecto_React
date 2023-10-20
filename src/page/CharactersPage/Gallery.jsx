@@ -6,6 +6,7 @@ export function Gallery({ data }) {
           <img
             src={`http://localhost:3000/${character.image}`}
             alt={character.name}
+            className="section-article-img"
           />
         </article>
       ))}

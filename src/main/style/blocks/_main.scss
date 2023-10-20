@@ -1,4 +1,30 @@
 .main {
           width: 100vw;
           height: 95vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: black;
+
+          .section {
+
+                    width: 95%;
+                    height: 85%;
+                    max-height: 70%;
+                    display: grid;
+                    place-items: center;
+                    overflow-y: auto;
+                    grid-template-columns: repeat(5, 310px);
+                    gap: 50px;
+
+                    .section-article {
+
+                              .section-article-img {
+                                        width: 248px;
+                                        height: 320px;
+                                        object-fit: cover;
+                                        background-color: aqua;
+                              }
+                    }
+          }
 }
