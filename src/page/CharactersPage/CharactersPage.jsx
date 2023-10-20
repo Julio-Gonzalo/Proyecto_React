@@ -1,9 +1,9 @@
 import axios from "axios";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Gallery } from "./Gallery";
 
-export function CharactersPage() {
+export function CharactersPage({ nombreBuscado }) {
+  console.log('Nombre buscado:', nombreBuscado);
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -14,9 +14,15 @@ export function CharactersPage() {
     getCharacters();
   }, []);
 
+  const filteredCharacters = nombreBuscado
+    ? characters.filter((character) =>
+        character.name && character.name.toLowerCase().includes(nombreBuscado.toLowerCase())
+      )
+    : characters;
+
   return (
     <section className="section">
-      <Gallery data={characters} />
+      <Gallery data={filteredCharacters} />
     </section>
   );
 }

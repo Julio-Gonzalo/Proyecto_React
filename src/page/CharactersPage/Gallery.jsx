@@ -2,6 +2,7 @@
 import "../../main/style.scss";
 
 export function Gallery({ data }) {
+  console.log('Datos recibidos en Gallery:', data);
   return (
     <>
       {data.map((character, index) => (
