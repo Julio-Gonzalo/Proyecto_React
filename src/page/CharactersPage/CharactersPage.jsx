@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Gallery } from "./Gallery";
-import "./CharacterPage.scss";
+import "./styles/CharacterPage.scss";
 
 export function CharactersPage() {
   const [characters, setCharacters] = useState([]);
