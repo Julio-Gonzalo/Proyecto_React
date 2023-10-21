@@ -14,9 +14,19 @@ export function CharactersPage() {
     getCharacters();
   }, []);
 
+  const [houses, setHouses] = useState([]);
+
+  useEffect(() => {
+    const getHouses = async () => {
+      const { data } = await axios("http://localhost:3000/houses");
+      setHouses(data);
+    };
+    getHouses();
+  }, []);
+
   return (
-    <section className="section">
-      <Gallery data={characters} />
-    </section>
+    <>
+      <Gallery data={characters} houseData={houses} />;
+    </>
   );
 }

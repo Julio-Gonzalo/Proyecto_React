@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "../../main/style.scss";
+import { CharacterInfo } from "./CharacterInfo";
 
-export function Gallery({ data }) {
+export function Gallery({ data, ...houseData }) {
   const [selectedCharacter, setSelectedCharacter] = useState(null);
 
   const showCharacterInfo = (character) => {
@@ -15,21 +16,28 @@ export function Gallery({ data }) {
   return (
     <>
       {selectedCharacter ? (
-        <article className="section-article-character" onClick={clearSelection}>
-          <div className="section-article-character-div">
-            <img
-              src={`http://localhost:3000/${selectedCharacter.image}`}
-              alt={selectedCharacter.name}
-              className="section-article-character-div-img"
-            />
-            <span className="section-article-character-div-name">
-              {selectedCharacter.name}
-            </span>
-          </div>
-          <div className="section-article-div2"></div>
-        </article>
+        <section className="section2">
+          <article
+            className="section2-article-character"
+            onClick={clearSelection}
+          >
+            <div className="section2-article-character-div">
+              <img
+                src={`http://localhost:3000/${selectedCharacter.image}`}
+                alt={selectedCharacter.name}
+                className="section2-article-character-div-img"
+              />
+              <span className="section2-article-character-div-name">
+                {selectedCharacter.name}
+              </span>
+            </div>
+            <article className="section2-article-character-article">
+              <CharacterInfo houseData={houseData} data={selectedCharacter} />
+            </article>
+          </article>
+        </section>
       ) : (
-        <>
+        <section className="section">
           {data.map((character, index) => (
             <article className={"section-article"} key={index}>
               <div
@@ -47,7 +55,7 @@ export function Gallery({ data }) {
               </div>
             </article>
           ))}
-        </>
+        </section>
       )}
     </>
   );

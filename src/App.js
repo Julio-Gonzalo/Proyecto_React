@@ -5,12 +5,12 @@ import { HousesPage } from "./page/HousesPage/HousesPage";
 import { CharactersPage } from "./page/CharactersPage/CharactersPage";
 import { HomePage } from "./page/HomePage/HomePage";
 import { MenuFooter } from "./componentes/MenuFooter/MenuFooter";
-import {MenuHeader} from "./componentes/MenuHeader/MenuHeader";
+import { MenuHeader } from "./componentes/MenuHeader/MenuHeader";
 
 function App() {
   return (
     <Router>
-    <MenuHeader/>
+      <MenuHeader />
       <main className="main">
         <Routes>
           <Route path="/cronologia" element={<ChronologyPage />} />
@@ -19,8 +19,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
         </Routes>
       </main>
-      
-      <MenuFooter/>
+      <MenuFooter />
     </Router>
   );
 }

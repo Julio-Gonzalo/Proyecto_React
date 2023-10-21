@@ -34,7 +34,14 @@
                     
                     }
           
-                    @import "./sub_blocks/articles-characters";
-                    @import "./sub_blocks/article-character-info";
+                    @import "./sub_blocks/section";
+          }
+          .section2 {
+
+                    width: 100%;
+                    height: 100%;
+
+                    @import "./sub_blocks/section2";
+
           }
 }
