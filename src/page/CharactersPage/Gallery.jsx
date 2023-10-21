@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "../../main/style.scss";
 import { CharacterInfo } from "./CharacterInfo";
 
 export function Gallery({ data, ...houseData }) {
