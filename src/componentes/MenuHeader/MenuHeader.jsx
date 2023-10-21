@@ -2,8 +2,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 export function MenuHeader() {
+  // eslint-disable-next-line
   const [t, i18n] = useTranslation();
-  const changeLanguage = (languaje) => i18n.changeLanguage(languaje);
+  const changeLanguage = (language) => i18n.changeLanguage(language);
 
   return (
     <>
@@ -21,6 +22,7 @@ export function MenuHeader() {
           onClick={() => changeLanguage('en')}
         />
       </header>
+      
     </>
   );
 }
