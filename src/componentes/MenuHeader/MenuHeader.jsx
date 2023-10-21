@@ -1,5 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import "./MenuHeader.scss";
+import esLogo from "./assets/spain.png";
+import enLogo from "./assets/united-kingdom.png";
 
 export function MenuHeader() {
   // eslint-disable-next-line
@@ -9,20 +12,19 @@ export function MenuHeader() {
   return (
     <>
       <header className="header">
-      <img
-          src="" // Ruta de la imagen para el español
+        <img
+          src={esLogo} // Ruta de la imagen para el español
           alt="Español"
-          style={{ cursor: 'pointer', width: '30px', marginRight: '10px' }}
-          onClick={() => changeLanguage('es')}
+          style={{ cursor: "pointer", width: "30px", marginRight: "10px" }}
+          onClick={() => changeLanguage("es")}
         />
         <img
-          src="" // Ruta de la imagen para el inglés
+          src={enLogo} // Ruta de la imagen para el inglés
           alt="English"
-          style={{ cursor: 'pointer', width: '30px' }}
-          onClick={() => changeLanguage('en')}
+          style={{ cursor: "pointer", width: "30px" }}
+          onClick={() => changeLanguage("en")}
         />
       </header>
-      
     </>
   );
 }
