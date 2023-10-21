@@ -1,0 +1,12 @@
+.footer {
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000000;
+}
+.footer .footer-links {
+  color: white;
+  padding-right: 5%;
+}/*# sourceMappingURL=MenuFooter.css.map */

@@ -23,12 +23,12 @@ export function CharacterInfo({ houseData, ...data }) {
           <h1 className="section2-article-character-article-div-titulos">
             Alianzas
           </h1>
-          <div className="section2-article-character-article-div-span">
-            <ul className="section2-article-character-article-div-span-ul">
+          <div className="section2-article-character-article-div-div">
+            <ul className="section2-article-character-article-div-div-ul">
               {characterData.alliances.map((alliance, index) => (
                 <li
                   key={index}
-                  className="section2-article-character-article-div-span-ul-li"
+                  className="section2-article-character-article-div-div-ul-li"
                 >
                   {alliance}
                 </li>
@@ -40,12 +40,12 @@ export function CharacterInfo({ houseData, ...data }) {
           <h1 className="section2-article-character-article-div-titulos">
             Apariciones
           </h1>
-          <div className="section2-article-character-article-div-span div-episodes">
-            <ul className="section2-article-character-article-div-span-ul">
+          <div className="section2-article-character-article-div-div div-episodes">
+            <ul className="section2-article-character-article-div-div-ul">
               {characterData.episodes.map((episodes, index) => (
                 <li
                   key={index}
-                  className="section2-article-character-article-div-span-ul-li"
+                  className="section2-article-character-article-div-div-ul-li"
                 >
                   {episodes}
                 </li>
@@ -57,12 +57,12 @@ export function CharacterInfo({ houseData, ...data }) {
           <h1 className="section2-article-character-article-div-titulos">
             Padre
           </h1>
-          <div className="section2-article-character-article-div-span">
-            <ul className="section2-article-character-article-div-span-ul">
+          <div className="section2-article-character-article-div-div">
+            <ul className="section2-article-character-article-div-div-ul">
               {characterData.parents.map((parents, index) => (
                 <li
                   key={index}
-                  className="section2-article-character-article-div-span-ul-li"
+                  className="section2-article-character-article-div-div-ul-li"
                 >
                   {parents}
                 </li>
@@ -74,12 +74,12 @@ export function CharacterInfo({ houseData, ...data }) {
           <h1 className="section2-article-character-article-div-titulos">
             Descendientes
           </h1>
-          <div className="section2-article-character-article-div-span">
-            <ul className="section2-article-character-article-div-span-ul">
+          <div className="section2-article-character-article-div-div">
+            <ul className="section2-article-character-article-div-div-ul">
               {characterData.siblings.map((siblings, index) => (
                 <li
                   key={index}
-                  className="section2-article-character-article-div-span-ul-li"
+                  className="section2-article-character-article-div-div-ul-li"
                 >
                   {siblings}
                 </li>
@@ -91,12 +91,12 @@ export function CharacterInfo({ houseData, ...data }) {
           <h1 className="section2-article-character-article-div-titulos">
             Titulos
           </h1>
-          <div className="section2-article-character-article-div-span div-titles">
-            <ul className="section2-article-character-article-div-span-ul">
+          <div className="section2-article-character-article-div-div div-titles">
+            <ul className="section2-article-character-article-div-div-ul">
               {characterData.titles.map((titles, index) => (
                 <li
                   key={index}
-                  className="section2-article-character-article-div-span-ul-li"
+                  className="section2-article-character-article-div-div-ul-li"
                 >
                   {titles}
                 </li>
@@ -113,9 +113,9 @@ export function CharacterInfo({ houseData, ...data }) {
           <h1 className="section2-article-character-article-div-titulos">
             Casa
           </h1>
-          <div className="section2-article-character-article-div-span">
-            <ul className="section2-article-character-article-div-span-ul">
-              <li className="section2-article-character-article-div-span-ul-li">
+          <div className="section2-article-character-article-div-div">
+            <ul className="section2-article-character-article-div-div-ul">
+              <li className="section2-article-character-article-div-div-ul-li">
                 {" "}
                 No tiene casa
               </li>
@@ -126,12 +126,12 @@ export function CharacterInfo({ houseData, ...data }) {
           <h1 className="section2-article-character-article-div-titulos">
             Alianzas
           </h1>
-          <div className="section2-article-character-article-div-span">
-            <ul className="section2-article-character-article-div-span-ul">
+          <div className="section2-article-character-article-div-div">
+            <ul className="section2-article-character-article-div-div-ul">
               {characterData.alliances.map((alliance, index) => (
                 <li
                   key={index}
-                  className="section2-article-character-article-div-span-ul-li"
+                  className="section2-article-character-article-div-div-ul-li"
                 >
                   {alliance}
                 </li>
@@ -143,12 +143,12 @@ export function CharacterInfo({ houseData, ...data }) {
           <h1 className="section2-article-character-article-div-titulos">
             Apariciones
           </h1>
-          <div className="section2-article-character-article-div-span">
-            <ul className="section2-article-character-article-div-span-ul div-episodes">
+          <div className="section2-article-character-article-div-div">
+            <ul className="section2-article-character-article-div-div-ul div-episodes">
               {characterData.episodes.map((episodes, index) => (
                 <li
                   key={index}
-                  className="section2-article-character-article-div-span-ul-li"
+                  className="section2-article-character-article-div-div-ul-li"
                 >
                   {episodes}
                 </li>
@@ -160,12 +160,12 @@ export function CharacterInfo({ houseData, ...data }) {
           <h1 className="section2-article-character-article-div-titulos">
             Padre
           </h1>
-          <div className="section2-article-character-article-div-span">
-            <ul className="section2-article-character-article-div-span-ul">
+          <div className="section2-article-character-article-div-div">
+            <ul className="section2-article-character-article-div-div-ul">
               {characterData.parents.map((parents, index) => (
                 <li
                   key={index}
-                  className="section2-article-character-article-div-span-ul-li"
+                  className="section2-article-character-article-div-div-ul-li"
                 >
                   {parents}
                 </li>
@@ -177,12 +177,12 @@ export function CharacterInfo({ houseData, ...data }) {
           <h1 className="section2-article-character-article-div-titulos">
             Descendientes
           </h1>
-          <div className="section2-article-character-article-div-span">
-            <ul className="section2-article-character-article-div-span-ul">
+          <div className="section2-article-character-article-div">
+            <ul className="section2-article-character-article-div-div-ul">
               {characterData.siblings.map((siblings, index) => (
                 <li
                   key={index}
-                  className="section2-article-character-article-div-span-ul-li"
+                  className="section2-article-character-article-div-div-ul-li"
                 >
                   {siblings}
                 </li>
@@ -194,12 +194,12 @@ export function CharacterInfo({ houseData, ...data }) {
           <h1 className="section2-article-character-article-div-titulos">
             Titulos
           </h1>
-          <div className="section2-article-character-article-div-span div-titles">
-            <ul className="section2-article-character-article-div-span-ul">
+          <div className="section2-article-character-article-div-div div-titles">
+            <ul className="section2-article-character-article-div-div-ul">
               {characterData.titles.map((titles, index) => (
                 <li
                   key={index}
-                  className="section2-article-character-article-div-span-ul-li"
+                  className="section2-article-character-article-div-div-ul-li"
                 >
                   {titles}
                 </li>
