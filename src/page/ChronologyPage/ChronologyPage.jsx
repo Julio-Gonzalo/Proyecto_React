@@ -1,95 +1,68 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import './styleChrono.css';
 
 export function ChronologyPage() {
   const [characters, setCharacters] = useState([]);
   const [ascendente, setAscendente] = useState(true);
 
   useEffect(() => {
-    // Función para cargar datos de la API
     const loadCharacterData = async () => {
       try {
-        const apiUrl = "http://localhost:3000/characters";
-        const response = await axios.get(apiUrl);
-        const data = response.data;
-        const charactersWithAge = data.filter(character => character.age !== "N/A");
-        setCharacters(charactersWithAge);
+        const Url = "http://localhost:3000/characters";
+        const res = await axios.get(Url);
+        const data = res.data;
+        const charactersWithAge = data.filter(character => character.age !== null);
+
+        const sortedCharacters = charactersWithAge.sort((a, b) => {
+          return ascendente ? a.age - b.age : b.age - a.age;
+        });
+
+        setCharacters(sortedCharacters);
       } catch (error) {
-        console.error("Error al cargar datos de la API: " + error);
+        console.error("Error al cargar datos: " + error);
       }
     };
 
     loadCharacterData();
-  }, []);
+  }, [ascendente]);
 
-  const toggleOrder = () => {
-    setAscendente(!ascendente);
-    setCharacters([...characters].reverse());
+  const getButtonText = () => {
+    if (ascendente) {
+      const youngestAge = getYoungestAge(characters);
+      return youngestAge;
+    } else {
+      const oldestAge = getOldestAge(characters);
+      return oldestAge;
+    }
+  };
+
+  const getYoungestAge = (characters) => {
+    return Math.min(...characters.map(character => Number(character.age)));
+  };
+
+  const getOldestAge = (characters) => {
+    return Math.max(...characters.map(character => Number(character.age)));
   };
 
   return (
-    <div>
-      <h1>Game of Thrones Timeline</h1>
-      <button onClick={toggleOrder}>Cambiar Orden</button>
-      <div>{ascendente ? 'Ascendente' : 'Descendente'}</div>
-      <ul>
-        {characters.map(character => (
-          <li key={character._id}>{character.name} - Edad: {character.age}</li>
+    <div className="container" style={{ height: '50vh', overflowY: 'auto' }}>
+      <button onClick={() => setAscendente(!ascendente)} className="circle-button">
+        {getButtonText()}
+      </button>
+      <ul className="timeline">
+        {characters.map((character, index) => (
+          <li key={character._id} className="timeline-item">
+            <div className="timeline-content">
+              <img src={`http://localhost:3000/${character.image}`} alt={character.name} />
+              <div>
+                <p className="name">{character.name}</p>
+                <p className="age">Edad: {character.age}</p>
+              </div>
+            </div>
+          </li>
         ))}
       </ul>
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-/* {
-    const [characters, setCharacters] = useState([]);
-    const [ascendente, setAscendente] = useState(true);
-  
-    useEffect(() => {
-      // Función para cargar datos
-      const loadCharacterData = async () => {
-        try {
-          const Url = "http://localhost:3000/characters";
-          const res = await axios.get(Url);
-          const data = res.data;
-          const charactersWithAge = data.filter(character => character.age !== "N/A");
-          setCharacters(charactersWithAge);
-        } catch (error) {
-          console.error("Error al cargar datos: " + error);
-        }
-      };
-  
-      loadCharacterData();
-    }, []);
-  
-    const toggleOrder = () => {
-      setAscendente(!ascendente);
-      setCharacters([...characters].reverse());
-    };
-  
-    return (
-        <div>
-          <button onClick={toggleOrder}>Cambiar Orden</button>
-          <div>{ascendente ? 'Ascendente' : 'Descendente'}</div>
-          <ul>
-            {characters.map(character => (
-              <li key={character._id}>
-                <img src={`http://localhost:3000/${character.image}`} alt={character.name} width="100" height="150" />
-                {character.name} - Edad: {character.age}
-              </li>
-            ))}
-          </ul>
-        </div>
-    );
-  }
-    */
