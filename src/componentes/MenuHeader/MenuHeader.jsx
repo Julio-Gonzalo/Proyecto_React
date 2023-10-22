@@ -72,27 +72,27 @@ export function MenuHeader({
   isHouseDetails,
   functionFilter,
 }) {
-  const functionFilterValue = functionFilter.functionFilter.functionFilter;
-
   const [filter, setFilter] = useState("");
 
   const filteredChange = (event) => {
     setFilter(event.target.value);
-    functionFilterValue(event.target.value);
+    functionFilter(event.target.value);
   };
 
   return (
-    <header className="header-personajes">
-      {isCharacterInfo || isHouseDetails ? (
-        <BackButton clearSelection={clearSelection} />
-      ) : null}
-      <LanguageMenu />
-      <input
-        type="text"
-        placeholder="Buscar..."
-        value={filter}
-        onChange={filteredChange}
-      />
-    </header>
+    <>
+      <header className="header-personajes">
+        {isCharacterInfo || isHouseDetails ? (
+          <BackButton clearSelection={clearSelection} />
+        ) : null}
+        <LanguageMenu />
+        <input
+          type="text"
+          placeholder="Buscar..."
+          value={filter}
+          onChange={filteredChange}
+        />
+      </header>
+    </>
   );
 }

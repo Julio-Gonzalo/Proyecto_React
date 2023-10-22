@@ -1,11 +1,10 @@
 import { useTranslation } from "react-i18next";
 
-export function CharacterInfo({ houseData, ...data }) {
+export function CharacterInfo({ houseData, data }) {
   const [t] = useTranslation("global");
-  const houseArray = houseData.houseData;
+  const houseArray = houseData;
 
-  const characterData = data.data;
-  const houseName = characterData.house;
+  const houseName = data.house;
 
   const selectedHouse = houseArray.find((house) => house.name === houseName);
 
@@ -14,7 +13,7 @@ export function CharacterInfo({ houseData, ...data }) {
       <>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-          {t("main.infoHome")}
+            {t("main.infoHome")}
           </h1>
           <img
             src={`http://localhost:3000/${selectedHouse.image}`}
@@ -24,11 +23,11 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-          {t("main.infoAlliances")}
+            {t("main.infoAlliances")}
           </h1>
           <div className="section2-article-character-article-div-div">
             <ul className="section2-article-character-article-div-div-ul">
-              {characterData.alliances.map((alliance, index) => (
+              {data.alliances.map((alliance, index) => (
                 <li
                   key={index}
                   className="section2-article-character-article-div-div-ul-li"
@@ -41,11 +40,11 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-          {t("main.infoAppearances")}
+            {t("main.infoAppearances")}
           </h1>
           <div className="section2-article-character-article-div-div div-episodes">
             <ul className="section2-article-character-article-div-div-ul">
-              {characterData.episodes.map((episodes, index) => (
+              {data.episodes.map((episodes, index) => (
                 <li
                   key={index}
                   className="section2-article-character-article-div-div-ul-li"
@@ -58,11 +57,11 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-          {t("main.infoFather")}
+            {t("main.infoFather")}
           </h1>
           <div className="section2-article-character-article-div-div">
             <ul className="section2-article-character-article-div-div-ul">
-              {characterData.parents.map((parents, index) => (
+              {data.parents.map((parents, index) => (
                 <li
                   key={index}
                   className="section2-article-character-article-div-div-ul-li"
@@ -75,11 +74,11 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-          {t("main.infoDecendents")}
+            {t("main.infoDecendents")}
           </h1>
           <div className="section2-article-character-article-div-div">
             <ul className="section2-article-character-article-div-div-ul">
-              {characterData.siblings.map((siblings, index) => (
+              {data.siblings.map((siblings, index) => (
                 <li
                   key={index}
                   className="section2-article-character-article-div-div-ul-li"
@@ -92,11 +91,11 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-          {t("main.infoTitles")}
+            {t("main.infoTitles")}
           </h1>
           <div className="section2-article-character-article-div-div div-titles">
             <ul className="section2-article-character-article-div-div-ul">
-              {characterData.titles.map((titles, index) => (
+              {data.titles.map((titles, index) => (
                 <li
                   key={index}
                   className="section2-article-character-article-div-div-ul-li"
@@ -114,7 +113,7 @@ export function CharacterInfo({ houseData, ...data }) {
       <>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-          {t("main.infoHome")}
+            {t("main.infoHome")}
           </h1>
           <div className="section2-article-character-article-div-div">
             <ul className="section2-article-character-article-div-div-ul">
@@ -127,11 +126,11 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-          {t("main.infoAlliances")}
+            {t("main.infoAlliances")}
           </h1>
           <div className="section2-article-character-article-div-div">
             <ul className="section2-article-character-article-div-div-ul">
-              {characterData.alliances.map((alliance, index) => (
+              {data.alliances.map((alliance, index) => (
                 <li
                   key={index}
                   className="section2-article-character-article-div-div-ul-li"
@@ -144,11 +143,11 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-          {t("main.infoAppearances")}
+            {t("main.infoAppearances")}
           </h1>
           <div className="section2-article-character-article-div-div">
             <ul className="section2-article-character-article-div-div-ul div-episodes">
-              {characterData.episodes.map((episodes, index) => (
+              {data.episodes.map((episodes, index) => (
                 <li
                   key={index}
                   className="section2-article-character-article-div-div-ul-li"
@@ -161,11 +160,11 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-          {t("main.infoFather")}
+            {t("main.infoFather")}
           </h1>
           <div className="section2-article-character-article-div-div">
             <ul className="section2-article-character-article-div-div-ul">
-              {characterData.parents.map((parents, index) => (
+              {data.parents.map((parents, index) => (
                 <li
                   key={index}
                   className="section2-article-character-article-div-div-ul-li"
@@ -178,11 +177,11 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-          {t("main.infoDecendents")}
+            {t("main.infoDecendents")}
           </h1>
           <div className="section2-article-character-article-div">
             <ul className="section2-article-character-article-div-div-ul">
-              {characterData.siblings.map((siblings, index) => (
+              {data.siblings.map((siblings, index) => (
                 <li
                   key={index}
                   className="section2-article-character-article-div-div-ul-li"
@@ -195,11 +194,11 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-          {t("main.infoTitles")}
+            {t("main.infoTitles")}
           </h1>
           <div className="section2-article-character-article-div-div div-titles">
             <ul className="section2-article-character-article-div-div-ul">
-              {characterData.titles.map((titles, index) => (
+              {data.titles.map((titles, index) => (
                 <li
                   key={index}
                   className="section2-article-character-article-div-div-ul-li"

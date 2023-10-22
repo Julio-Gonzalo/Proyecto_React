@@ -2,7 +2,7 @@ import { useState } from "react";
 import { CharacterInfo } from "./CharacterInfo";
 import { MenuHeader } from "../../componentes/MenuHeader/MenuHeader";
 
-export function Gallery({ data, houseData, ...functionFilter }) {
+export function Gallery({ data, houseData, functionFilter }) {
   const [selectedCharacter, setSelectedCharacter] = useState(null);
 
   const showCharacterInfo = (character) => {

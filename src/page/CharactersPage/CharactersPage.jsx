@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Gallery } from "./Gallery";
 import "./styles/CharacterPage.scss";
 
-export function CharactersPage({ filter, ...functionFilter }) {
+export function CharactersPage({ filter, functionFilter }) {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
