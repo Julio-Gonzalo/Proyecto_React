@@ -17,7 +17,7 @@ export function HousesPage() {
 
   return (
     <>
-      <Gallery data={houses} />;
+      <Gallery data={houses} />
     </>
   );
 }

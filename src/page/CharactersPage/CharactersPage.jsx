@@ -27,7 +27,7 @@ export function CharactersPage() {
 
   return (
     <>
-      <Gallery data={characters} houseData={houses} />;
+      <Gallery data={characters} houseData={houses} />
     </>
   );
 }

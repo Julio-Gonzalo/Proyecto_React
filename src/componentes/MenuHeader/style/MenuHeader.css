@@ -1,0 +1,18 @@
+.header-personajes {
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282c34;
+  font-family: Verdana;
+}
+.header-personajes .header-div-personajes {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding-left: 10%;
+}
+.header-personajes .header-div-idioma-home {
+  padding-right: 10%;
+}/*# sourceMappingURL=MenuHeader.css.map */
