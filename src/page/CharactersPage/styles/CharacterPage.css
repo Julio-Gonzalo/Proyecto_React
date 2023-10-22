@@ -1,4 +1,35 @@
-.main {
+.header {
+  width: 100vw;
+  height: 5vh;
+}
+.header .div-input {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 7.5%;
+}
+.header .div-input .input-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.header .div-input .input-img .img {
+  width: 15px;
+  height: 15px;
+  border: none;
+  border-bottom: 1px solid white;
+}
+.header .div-input .input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  color: white;
+}
+
+.main-characters {
   width: 100vw;
   height: 90vh;
   display: flex;
@@ -6,40 +37,40 @@
   align-items: center;
   background-color: #000000;
 }
-.main .section {
+.main-characters .section {
   max-width: 100%;
   max-height: 95%;
   display: grid;
   place-items: center;
   overflow-y: auto;
-  grid-template-columns: repeat(5, 260px);
+  grid-template-columns: repeat(5, 280px);
   gap: 45px;
 }
-.main .section::-webkit-scrollbar {
+.main-characters .section::-webkit-scrollbar {
   width: 10px;
 }
-.main .section::-webkit-scrollbar-thumb {
+.main-characters .section::-webkit-scrollbar-thumb {
   background-color: #666;
   border-radius: 10px;
 }
-.main .section::-webkit-scrollbar-track {
+.main-characters .section::-webkit-scrollbar-track {
   background-color: #222;
 }
-.main .section .section-article {
+.main-characters .section .section-article {
   width: 100%;
   height: 100%;
 }
-.main .section .section-article .section-article-div {
+.main-characters .section .section-article .section-article-div {
   position: relative;
   display: inline-block;
 }
-.main .section .section-article .section-article-div-img {
+.main-characters .section .section-article .section-article-div-img {
   width: 248px;
   height: 320px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.main .section .section-article .section-article-div-span {
+.main-characters .section .section-article .section-article-div-span {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -52,19 +83,19 @@
   opacity: 0;
   transition: visibility 0s, opacity 0.3s ease;
 }
-.main .section .section-article .section-article-div:hover .section-article-div-span {
+.main-characters .section .section-article .section-article-div:hover .section-article-div-span {
   visibility: visible;
   opacity: 1;
 }
-.main .section2 {
+.main-characters .section2 {
   width: 100%;
   height: 100%;
 }
-.main .section2 .section2-article-character {
+.main-characters .section2 .section2-article-character {
   width: 100%;
   height: 100%;
 }
-.main .section2 .section2-article-character .section2-article-character-div {
+.main-characters .section2 .section2-article-character .section2-article-character-div {
   width: 100%;
   height: 65%;
   display: flex;
@@ -72,24 +103,24 @@
   justify-content: center;
   align-items: center;
 }
-.main .section2 .section2-article-character .section2-article-character-div .section2-article-character-div-img {
+.main-characters .section2 .section2-article-character .section2-article-character-div .section2-article-character-div-img {
   width: 248px;
   height: 320px;
   -o-object-fit: cover;
      object-fit: cover;
   padding-bottom: 30px;
 }
-.main .section2 .section2-article-character .section2-article-character-div .section2-article-character-div-name {
+.main-characters .section2 .section2-article-character .section2-article-character-div .section2-article-character-div-name {
   color: white;
   font-size: 30px;
 }
-.main .section2 .section2-article-character .section2-article-character-article {
+.main-characters .section2 .section2-article-character .section2-article-character-article {
   width: 100%;
   height: 35%;
   display: flex;
   justify-content: space-around;
 }
-.main .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div {
+.main-characters .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div {
   width: 16%;
   height: 100%;
   color: white;
@@ -98,46 +129,46 @@
   align-items: center;
   text-align: center;
 }
-.main .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .section2-article-character-article-div-titulos {
+.main-characters .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .section2-article-character-article-div-titulos {
   padding-bottom: 30px;
 }
-.main .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .section2-article-character-article-div-div {
+.main-characters .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .section2-article-character-article-div-div {
   font-size: 12px;
 }
-.main .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .section2-article-character-article-div-div .section2-article-character-article-div-div-ul .section2-article-character-article-div-div-ul-li {
+.main-characters .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .section2-article-character-article-div-div .section2-article-character-article-div-div-ul .section2-article-character-article-div-div-ul-li {
   padding-bottom: 20px;
 }
-.main .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .div-episodes {
+.main-characters .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .div-episodes {
   max-width: 100%;
   max-height: 50%;
   overflow-y: scroll;
 }
-.main .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .div-episodes::-webkit-scrollbar {
+.main-characters .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .div-episodes::-webkit-scrollbar {
   width: 5px;
 }
-.main .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .div-episodes::-webkit-scrollbar-thumb {
+.main-characters .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .div-episodes::-webkit-scrollbar-thumb {
   background-color: #666;
   border-radius: 10px;
 }
-.main .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .div-episodes::-webkit-scrollbar-track {
+.main-characters .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .div-episodes::-webkit-scrollbar-track {
   background-color: #222;
 }
-.main .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .div-titles {
+.main-characters .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .div-titles {
   max-width: 100%;
   max-height: 100%;
   overflow-y: scroll;
 }
-.main .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .div-titles::-webkit-scrollbar {
+.main-characters .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .div-titles::-webkit-scrollbar {
   width: 5px;
 }
-.main .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .div-titles::-webkit-scrollbar-thumb {
+.main-characters .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .div-titles::-webkit-scrollbar-thumb {
   background-color: #666;
   border-radius: 10px;
 }
-.main .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .div-titles::-webkit-scrollbar-track {
+.main-characters .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .div-titles::-webkit-scrollbar-track {
   background-color: #222;
 }
-.main .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .section2-article-character-article-div-img {
+.main-characters .section2 .section2-article-character .section2-article-character-article .section2-article-character-article-div .section2-article-character-article-div-img {
   width: 160px;
   height: 191.6px;
 }/*# sourceMappingURL=CharacterPage.css.map */

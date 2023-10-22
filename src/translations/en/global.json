@@ -1,9 +1,21 @@
 {
     "main": {
+    "hometitle": "GAME OF THRONE",
     "menuHome": "Home",
     "menuCharacters": "Characters",
     "menuHouses": "Houses",
-    "menuTimeline": "Timeline"
+    "menuTimeline": "Timeline",
+    "infoHome": "Home",
+    "infoAlliances": "Alliances",
+    "infoAppearances": "Appearances",
+    "infoFather": "Father",
+    "infoDecendents": "Decendents",
+    "infoTitles": "Titles",
+    "infoSettlement": "Settlement",
+    "infoRegion": "Region",
+    "infoReligions": "Religions",
+    "infoFoundation": "Foundation",
+    "buttonback": "Back"
      }
     
   }

@@ -1,4 +1,4 @@
-.main {
+.main-houses {
   width: 100vw;
   height: 90vh;
   display: flex;
@@ -6,53 +6,53 @@
   align-items: center;
   background-color: #000000;
 }
-.main .section-houses {
+.main-houses .section-houses {
   max-width: 100%;
   max-height: 95%;
   display: grid;
   place-items: center;
   overflow-y: auto;
-  grid-template-columns: repeat(5, 260px);
+  grid-template-columns: repeat(5, 300px);
   gap: 45px;
 }
-.main .section-houses::-webkit-scrollbar {
+.main-houses .section-houses::-webkit-scrollbar {
   width: 10px;
 }
-.main .section-houses::-webkit-scrollbar-thumb {
+.main-houses .section-houses::-webkit-scrollbar-thumb {
   background-color: #666;
   border-radius: 10px;
 }
-.main .section-houses::-webkit-scrollbar-track {
+.main-houses .section-houses::-webkit-scrollbar-track {
   background-color: #222;
 }
-.main .section-houses .section-houses-article {
+.main-houses .section-houses .section-houses-article {
   width: 100%;
   height: 100%;
 }
-.main .section-houses .section-houses-article .section-houses-article-div {
+.main-houses .section-houses .section-houses-article .section-houses-article-div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main .section-houses .section-houses-article .section-houses-article-div-img {
+.main-houses .section-houses .section-houses-article .section-houses-article-div-img {
   width: 248px;
   height: 320px;
   -o-object-fit: cover;
      object-fit: cover;
   padding-bottom: 20px;
 }
-.main .section-houses .section-houses-article .section-houses-article-div-span {
+.main-houses .section-houses .section-houses-article .section-houses-article-div-span {
   color: white;
 }
-.main .section2-houses {
+.main-houses .section2-houses {
   width: 100%;
   height: 100%;
 }
-.main .section2-houses .section2-houses-article-houses {
+.main-houses .section2-houses .section2-houses-article-houses {
   width: 100%;
   height: 100%;
 }
-.main .section2-houses .section2-houses-article-houses .section2-houses-article-houses-div {
+.main-houses .section2-houses .section2-houses-article-houses .section2-houses-article-houses-div {
   width: 100%;
   height: 65%;
   display: flex;
@@ -60,24 +60,24 @@
   justify-content: center;
   align-items: center;
 }
-.main .section2-houses .section2-houses-article-houses .section2-houses-article-houses-div .section2-houses-article-houses-div-img {
+.main-houses .section2-houses .section2-houses-article-houses .section2-houses-article-houses-div .section2-houses-article-houses-div-img {
   width: 248px;
   height: 320px;
   -o-object-fit: cover;
      object-fit: cover;
   padding-bottom: 30px;
 }
-.main .section2-houses .section2-houses-article-houses .section2-houses-article-houses-div .section2-houses-article-houses-div-name {
+.main-houses .section2-houses .section2-houses-article-houses .section2-houses-article-houses-div .section2-houses-article-houses-div-name {
   color: white;
   font-size: 30px;
 }
-.main .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article {
+.main-houses .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article {
   width: 100%;
   height: 35%;
   display: flex;
   justify-content: space-around;
 }
-.main .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div {
+.main-houses .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div {
   width: 16%;
   height: 100%;
   color: white;
@@ -86,44 +86,44 @@
   align-items: center;
   text-align: center;
 }
-.main .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .section2-houses-article-houses-article-div-titulos {
+.main-houses .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .section2-houses-article-houses-article-div-titulos {
   padding-bottom: 30px;
 }
-.main .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .section2-houses-article-houses-article-div-ul .section2-houses-article-houses-article-div-ul-li {
+.main-houses .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .section2-houses-article-houses-article-div-ul .section2-houses-article-houses-article-div-ul-li {
   padding-bottom: 20px;
   font-size: 12px;
 }
-.main .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .div-episodes {
+.main-houses .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .div-episodes {
   max-width: 100%;
   max-height: 50%;
   overflow-y: scroll;
 }
-.main .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .div-episodes::-webkit-scrollbar {
+.main-houses .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .div-episodes::-webkit-scrollbar {
   width: 5px;
 }
-.main .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .div-episodes::-webkit-scrollbar-thumb {
+.main-houses .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .div-episodes::-webkit-scrollbar-thumb {
   background-color: #666;
   border-radius: 10px;
 }
-.main .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .div-episodes::-webkit-scrollbar-track {
+.main-houses .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .div-episodes::-webkit-scrollbar-track {
   background-color: #222;
 }
-.main .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .div-titles {
+.main-houses .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .div-titles {
   max-width: 100%;
   max-height: 100%;
   overflow-y: scroll;
 }
-.main .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .div-titles::-webkit-scrollbar {
+.main-houses .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .div-titles::-webkit-scrollbar {
   width: 5px;
 }
-.main .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .div-titles::-webkit-scrollbar-thumb {
+.main-houses .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .div-titles::-webkit-scrollbar-thumb {
   background-color: #666;
   border-radius: 10px;
 }
-.main .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .div-titles::-webkit-scrollbar-track {
+.main-houses .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .div-titles::-webkit-scrollbar-track {
   background-color: #222;
 }
-.main .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .section2-houses-article-houses-article-div-img {
+.main-houses .section2-houses .section2-houses-article-houses .section2-houses-article-houses-article .section2-houses-article-houses-article-div .section2-houses-article-houses-article-div-img {
   width: 160px;
   height: 191.6px;
 }/*# sourceMappingURL=HousePage.css.map */

@@ -1,6 +1,10 @@
 import { useState } from "react";
+import { MenuHeader } from "../../componentes/MenuHeader/MenuHeader";
+import { useTranslation } from "react-i18next";
+import { MenuFooter } from "../../componentes/MenuFooter/MenuFooter";
 
-export function Gallery({ data }) {
+export function Gallery({ data, functionFilter }) {
+  const [t] = useTranslation("global");
   const [selectedHouses, setSelectedHouses] = useState(null);
 
   const showHousesInfo = (house) => {
@@ -13,124 +17,112 @@ export function Gallery({ data }) {
 
   return (
     <>
-      {selectedHouses ? (
-        <section className="section2-houses">
-          <article
-            className="section2-houses-article-houses"
-            onClick={clearSelection}
-          >
-            <div className="section2-houses-article-houses-div">
-              <img
-                src={`http://localhost:3000/${selectedHouses.image}`}
-                alt={selectedHouses.name}
-                className="section2-houses-article-houses-div-img"
-              />
-              <span className="section2-houses-article-houses-div-name">
-                {selectedHouses.name}
-              </span>
-            </div>
-            <article className="section2-houses-article-houses-article">
-              {/* <div className="section2-houses-article-houses-article-div">
-                <h1 className="section2-houses-article-houses-article-div-titulos">
-                  Lema
-                </h1>
-                <div className="section2-houses-article-houses-article-div-div">
-                  <ul className="section2-article-houses-article-div-div-ul">
+      <MenuHeader
+        clearSelection={clearSelection}
+        isHouseDetails={!!selectedHouses}
+        functionFilter={functionFilter}
+      />
+      <main className="main-houses">
+        {selectedHouses ? (
+          <section className="section2-houses">
+            <article className="section2-houses-article-houses">
+              <div className="section2-houses-article-houses-div">
+                <img
+                  src={`http://localhost:3000/${selectedHouses.image}`}
+                  alt={selectedHouses.name}
+                  className="section2-houses-article-houses-div-img"
+                />
+                <span className="section2-houses-article-houses-div-name">
+                  {selectedHouses.name}
+                </span>
+              </div>
+              <article className="section2-houses-article-houses-article">
+                <div className="section2-houses-article-houses-article-div">
+                  <h1 className="section2-houses-article-houses-article-div-titulos">
+                    {t("main.infoSettlement")}
+                  </h1>
+                  <ul className="section2-houses-article-houses-article-div-ul">
+                    <li className="section2-houses-article-houses-article-div-ul-li">
+                      {selectedHouses.settlement}
+                    </li>
+                  </ul>
+                </div>
+                <div className="section2-houses-article-houses-article-div">
+                  <h1 className="section2-houses-article-houses-article-div-titulos">
+                    {t("main.infoRegion")}
+                  </h1>
+                  <ul className="section2-houses-article-houses-article-div-ul">
+                    <li className="section2-houses-article-houses-article-div-ul-li">
+                      {selectedHouses.region}
+                    </li>
+                  </ul>
+                </div>
+                <div className="section2-houses-article-houses-article-div">
+                  <h1 className="section2-houses-article-houses-article-div-titulos">
+                    {t("main.infoAlliances")}
+                  </h1>
+                  <ul className="section2-houses-article-houses-article-div-ul">
                     {selectedHouses.alliances.map((alliance, index) => (
                       <li
                         key={index}
-                        className="section2-article-houses-article-div-ul-li"
+                        className="section2-houses-article-houses-article-div-ul-li"
                       >
                         {alliance}
                       </li>
                     ))}
                   </ul>
                 </div>
-              </div> */}
-              <div className="section2-houses-article-houses-article-div">
-                <h1 className="section2-houses-article-houses-article-div-titulos">
-                  Sede
-                </h1>
-                <ul className="section2-houses-article-houses-article-div-ul">
-                  <li className="section2-houses-article-houses-article-div-ul-li">
-                    {selectedHouses.settlement}
-                  </li>
-                </ul>
-              </div>
-              <div className="section2-houses-article-houses-article-div">
-                <h1 className="section2-houses-article-houses-article-div-titulos">
-                  Region
-                </h1>
-                <ul className="section2-houses-article-houses-article-div-ul">
-                  <li className="section2-houses-article-houses-article-div-ul-li">
-                    {selectedHouses.region}
-                  </li>
-                </ul>
-              </div>
-              <div className="section2-houses-article-houses-article-div">
-                <h1 className="section2-houses-article-houses-article-div-titulos">
-                  Alianzas
-                </h1>
-                <ul className="section2-houses-article-houses-article-div-ul">
-                  {selectedHouses.alliances.map((alliance, index) => (
-                    <li
-                      key={index}
-                      className="section2-houses-article-houses-article-div-ul-li"
-                    >
-                      {alliance}
+                <div className="section2-houses-article-houses-article-div">
+                  <h1 className="section2-houses-article-houses-article-div-titulos">
+                    {t("main.infoReligions")}
+                  </h1>
+                  <ul className="section2-houses-article-houses-article-div-ul">
+                    {selectedHouses.religions.map((religions, index) => (
+                      <li
+                        key={index}
+                        className="section2-houses-article-houses-article-div-ul-li"
+                      >
+                        {religions}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="section2-houses-article-houses-article-div">
+                  <h1 className="section2-houses-article-houses-article-div-titulos">
+                    {t("main.infoFoundation")}
+                  </h1>
+                  <ul className="section2-article-houses-article-div-ul">
+                    <li className="section2-article-houses-article-div-ul-li">
+                      {selectedHouses.foundation}
                     </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="section2-houses-article-houses-article-div">
-                <h1 className="section2-houses-article-houses-article-div-titulos">
-                  Religiones
-                </h1>
-                <ul className="section2-houses-article-houses-article-div-ul">
-                  {selectedHouses.religions.map((religions, index) => (
-                    <li
-                      key={index}
-                      className="section2-houses-article-houses-article-div-ul-li"
-                    >
-                      {religions}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="section2-houses-article-houses-article-div">
-                <h1 className="section2-houses-article-houses-article-div-titulos">
-                  Fundacion
-                </h1>
-                <ul className="section2-article-houses-article-div-ul">
-                  <li className="section2-article-houses-article-div-ul-li">
-                    {selectedHouses.foundation}
-                  </li>
-                </ul>
-              </div>
+                  </ul>
+                </div>
+              </article>
             </article>
-          </article>
-        </section>
-      ) : (
-        <section className="section-houses">
-          {data.map((house, index) => (
-            <article className={"section-houses-article"} key={index}>
-              <div
-                className="section-houses-article-div"
-                onClick={() => showHousesInfo(house)}
-              >
-                <img
-                  src={`http://localhost:3000/${house.image}`}
-                  alt={house.name}
-                  className="section-houses-article-div-img"
-                />
-                <span className="section-houses-article-div-span">
-                  {house.name}
-                </span>
-              </div>
-            </article>
-          ))}
-        </section>
-      )}
+          </section>
+        ) : (
+          <section className="section-houses">
+            {data.map((house, index) => (
+              <article className={"section-houses-article"} key={index}>
+                <div
+                  className="section-houses-article-div"
+                  onClick={() => showHousesInfo(house)}
+                >
+                  <img
+                    src={`http://localhost:3000/${house.image}`}
+                    alt={house.name}
+                    className="section-houses-article-div-img"
+                  />
+                  <span className="section-houses-article-div-span">
+                    {house.name}
+                  </span>
+                </div>
+              </article>
+            ))}
+          </section>
+        )}
+      </main>
+      <MenuFooter />
     </>
   );
 }

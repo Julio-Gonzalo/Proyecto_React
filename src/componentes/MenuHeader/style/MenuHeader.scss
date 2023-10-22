@@ -1,0 +1,20 @@
+.header {
+          width: 100vw;
+          height: 5vh;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #282c34;
+          font-family: Verdana;
+
+          .header-div-info {
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                    padding-left: 50px;
+
+          }
+}
+
