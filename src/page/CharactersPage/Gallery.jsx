@@ -2,7 +2,7 @@ import { useState } from "react";
 import { CharacterInfo } from "./CharacterInfo";
 import { MenuHeader } from "../../componentes/MenuHeader/MenuHeader";
 
-export function Gallery({ data, ...houseData }) {
+export function Gallery({ data, houseData, ...functionFilter }) {
   const [selectedCharacter, setSelectedCharacter] = useState(null);
 
   const showCharacterInfo = (character) => {
@@ -15,7 +15,11 @@ export function Gallery({ data, ...houseData }) {
 
   return (
     <>
-      <MenuHeader clearSelection={clearSelection} isCharacterInfo={!!selectedCharacter} />
+      <MenuHeader
+        clearSelection={clearSelection}
+        isCharacterInfo={!!selectedCharacter}
+        functionFilter={functionFilter}
+      />
       <main className="main-characters">
         {selectedCharacter ? (
           <section className="section2">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./style/MenuHeader.scss";
 import esLogo from "./assets/spain.png";
@@ -66,11 +66,33 @@ function LanguageMenu() {
   );
 }
 
-export function MenuHeader({ clearSelection, isCharacterInfo, isHouseDetails }) {
+export function MenuHeader({
+  clearSelection,
+  isCharacterInfo,
+  isHouseDetails,
+  functionFilter,
+}) {
+  const functionFilterValue = functionFilter.functionFilter.functionFilter;
+
+  const [filter, setFilter] = useState("");
+
+  const filteredChange = (event) => {
+    setFilter(event.target.value);
+    functionFilterValue(event.target.value);
+  };
+
   return (
     <header className="header-personajes">
-      {isCharacterInfo || isHouseDetails ? <BackButton clearSelection={clearSelection} /> : null}
+      {isCharacterInfo || isHouseDetails ? (
+        <BackButton clearSelection={clearSelection} />
+      ) : null}
       <LanguageMenu />
+      <input
+        type="text"
+        placeholder="Buscar..."
+        value={filter}
+        onChange={filteredChange}
+      />
     </header>
   );
 }
