@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { MenuHeader } from "../../componentes/MenuHeader/MenuHeader";
+import { useTranslation } from "react-i18next";
 
 export function Gallery({ data }) {
+  const [t] = useTranslation("global");
   const [selectedHouses, setSelectedHouses] = useState(null);
 
   const showHousesInfo = (house) => {
@@ -14,7 +16,7 @@ export function Gallery({ data }) {
 
   return (
     <>
-      <MenuHeader clearSelection={clearSelection} />
+      <MenuHeader clearSelection={clearSelection} isHouseDetails={!!selectedHouses} />
       <main className="main-houses">
         {selectedHouses ? (
           <section className="section2-houses">
@@ -32,7 +34,7 @@ export function Gallery({ data }) {
               <article className="section2-houses-article-houses-article">
                 <div className="section2-houses-article-houses-article-div">
                   <h1 className="section2-houses-article-houses-article-div-titulos">
-                    Sede
+                  {t("main.infoSettlement")} 
                   </h1>
                   <ul className="section2-houses-article-houses-article-div-ul">
                     <li className="section2-houses-article-houses-article-div-ul-li">
@@ -42,7 +44,7 @@ export function Gallery({ data }) {
                 </div>
                 <div className="section2-houses-article-houses-article-div">
                   <h1 className="section2-houses-article-houses-article-div-titulos">
-                    Region
+                  {t("main.infoRegion")}
                   </h1>
                   <ul className="section2-houses-article-houses-article-div-ul">
                     <li className="section2-houses-article-houses-article-div-ul-li">
@@ -52,7 +54,7 @@ export function Gallery({ data }) {
                 </div>
                 <div className="section2-houses-article-houses-article-div">
                   <h1 className="section2-houses-article-houses-article-div-titulos">
-                    Alianzas
+                  {t("main.infoAlliances")}
                   </h1>
                   <ul className="section2-houses-article-houses-article-div-ul">
                     {selectedHouses.alliances.map((alliance, index) => (
@@ -67,7 +69,7 @@ export function Gallery({ data }) {
                 </div>
                 <div className="section2-houses-article-houses-article-div">
                   <h1 className="section2-houses-article-houses-article-div-titulos">
-                    Religiones
+                  {t("main.infoReligions")}
                   </h1>
                   <ul className="section2-houses-article-houses-article-div-ul">
                     {selectedHouses.religions.map((religions, index) => (
@@ -82,7 +84,7 @@ export function Gallery({ data }) {
                 </div>
                 <div className="section2-houses-article-houses-article-div">
                   <h1 className="section2-houses-article-houses-article-div-titulos">
-                    Fundacion
+                  {t("main.infoFoundation")}
                   </h1>
                   <ul className="section2-article-houses-article-div-ul">
                     <li className="section2-article-houses-article-div-ul-li">

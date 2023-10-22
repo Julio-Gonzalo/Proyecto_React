@@ -15,7 +15,7 @@ export function Gallery({ data, ...houseData }) {
 
   return (
     <>
-      <MenuHeader clearSelection={clearSelection} />
+      <MenuHeader clearSelection={clearSelection} isCharacterInfo={!!selectedCharacter} />
       <main className="main-characters">
         {selectedCharacter ? (
           <section className="section2">

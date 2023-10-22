@@ -5,170 +5,72 @@ import esLogo from "./assets/spain.png";
 import enLogo from "./assets/united-kingdom.png";
 import atrasLogo from "./assets/arrow.png";
 import homeLogo from "./assets/home.png";
-import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-export function MenuHeader({ clearSelection }) {
+// Componente para el botón "Volver"
+function BackButton({ clearSelection }) {
+  const [t] = useTranslation("global");
+  return (
+    <div className="header-div-personajes">
+      <img
+        src={atrasLogo}
+        alt="Logo-Atrás"
+        style={{
+          cursor: "pointer",
+          width: "30px",
+          marginRight: "10px",
+        }}
+        onClick={clearSelection}
+      />
+      <span>{t("main.buttonback")}</span>
+    </div>
+  );
+}
+
+// Componente para el menú de idiomas y enlace a la página de inicio
+function LanguageMenu() {
   // eslint-disable-next-line
   const [t, i18n] = useTranslation();
   const changeLanguage = (language) => i18n.changeLanguage(language);
 
-  const { pathname } = useLocation();
-
   return (
-    <>
-      <header className="header">
-        {pathname === "/personajes" && (
-          <>
-            <div className="header-characters-div-characters">
-              <img
-                src={atrasLogo}
-                alt="Logo-Atrás"
-                style={{
-                  cursor: "pointer",
-                  width: "30px",
-                  marginRight: "10px",
-                }}
-                onClick={clearSelection}
-              />
-              <span>Volver</span>
-            </div>
-            <div className="header-characters-div-idioma-home">
-              <Link to="/">
-                <img
-                  src={homeLogo}
-                  alt="Español"
-                  style={{
-                    cursor: "pointer",
-                    width: "30px",
-                    marginRight: "10px",
-                  }}
-                />
-              </Link>
-              <img
-                src={esLogo} // Ruta de la imagen para el español
-                alt="Español"
-                style={{
-                  cursor: "pointer",
-                  width: "30px",
-                  marginRight: "10px",
-                }}
-                onClick={() => changeLanguage("es")}
-              />
-              <img
-                src={enLogo} // Ruta de la imagen para el inglés
-                alt="English"
-                style={{ cursor: "pointer", width: "30px" }}
-                onClick={() => changeLanguage("en")}
-              />
-            </div>
-          </>
-        )}
+    <div className="header-div-idioma-home">
+      <Link to="/">
+        <img
+          src={homeLogo}
+          alt="Español"
+          style={{
+            cursor: "pointer",
+            width: "30px",
+            marginRight: "10px",
+          }}
+        />
+      </Link>
+      <img
+        src={esLogo}
+        alt="Español"
+        style={{
+          cursor: "pointer",
+          width: "30px",
+          marginRight: "10px",
+        }}
+        onClick={() => changeLanguage("es")}
+      />
+      <img
+        src={enLogo}
+        alt="English"
+        style={{ cursor: "pointer", width: "30px" }}
+        onClick={() => changeLanguage("en")}
+      />
+    </div>
+  );
+}
 
-        {pathname === "/casas" && (
-          <>
-            <div className="header-houses-div-houses">
-              <img
-                src={atrasLogo}
-                alt="Logo-Atrás"
-                style={{
-                  cursor: "pointer",
-                  width: "30px",
-                  marginRight: "10px",
-                }}
-                onClick={clearSelection}
-              />
-              <span>Volver</span>
-            </div>
-            <div className="header-houses-div-idioma-home">
-              <Link to="/">
-                <img
-                  src={homeLogo}
-                  alt="Español"
-                  style={{
-                    cursor: "pointer",
-                    width: "30px",
-                    marginRight: "10px",
-                  }}
-                />
-              </Link>
-              <img
-                src={esLogo} // Ruta de la imagen para el español
-                alt="Español"
-                style={{
-                  cursor: "pointer",
-                  width: "30px",
-                  marginRight: "10px",
-                }}
-                onClick={() => changeLanguage("es")}
-              />
-              <img
-                src={enLogo} // Ruta de la imagen para el inglés
-                alt="English"
-                style={{ cursor: "pointer", width: "30px" }}
-                onClick={() => changeLanguage("en")}
-              />
-            </div>
-          </>
-        )}
-
-        {pathname === "/cronologia" && (
-          <>
-            <div className="header-div-chronology">
-              <Link to="/">
-                <img
-                  src={homeLogo}
-                  alt="Español"
-                  style={{
-                    cursor: "pointer",
-                    width: "30px",
-                    marginRight: "10px",
-                  }}
-                />
-              </Link>
-              <img
-                src={esLogo} // Ruta de la imagen para el español
-                alt="Español"
-                style={{
-                  cursor: "pointer",
-                  width: "30px",
-                  marginRight: "10px",
-                }}
-                onClick={() => changeLanguage("es")}
-              />
-              <img
-                src={enLogo} // Ruta de la imagen para el inglés
-                alt="English"
-                style={{ cursor: "pointer", width: "30px" }}
-                onClick={() => changeLanguage("en")}
-              />
-            </div>
-          </>
-        )}
-
-        {pathname === "/" && (
-          <>
-            <div className="header-div-idioma-home">
-              <img
-                src={esLogo} // Ruta de la imagen para el español
-                alt="Español"
-                style={{
-                  cursor: "pointer",
-                  width: "30px",
-                  marginRight: "10px",
-                }}
-                onClick={() => changeLanguage("es")}
-              />
-              <img
-                src={enLogo} // Ruta de la imagen para el inglés
-                alt="English"
-                style={{ cursor: "pointer", width: "30px" }}
-                onClick={() => changeLanguage("en")}
-              />
-            </div>
-          </>
-        )}
-      </header>
-    </>
+export function MenuHeader({ clearSelection, isCharacterInfo, isHouseDetails }) {
+  return (
+    <header className="header-personajes">
+      {isCharacterInfo || isHouseDetails ? <BackButton clearSelection={clearSelection} /> : null}
+      <LanguageMenu />
+    </header>
   );
 }

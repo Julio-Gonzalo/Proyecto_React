@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export function CharacterInfo({ houseData, ...data }) {
+  const [t] = useTranslation("global");
   const houseArray = houseData.houseData;
 
   const characterData = data.data;
@@ -11,7 +14,7 @@ export function CharacterInfo({ houseData, ...data }) {
       <>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-            Casa
+          {t("main.infoHome")}
           </h1>
           <img
             src={`http://localhost:3000/${selectedHouse.image}`}
@@ -21,7 +24,7 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-            Alianzas
+          {t("main.infoAlliances")}
           </h1>
           <div className="section2-article-character-article-div-div">
             <ul className="section2-article-character-article-div-div-ul">
@@ -38,7 +41,7 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-            Apariciones
+          {t("main.infoAppearances")}
           </h1>
           <div className="section2-article-character-article-div-div div-episodes">
             <ul className="section2-article-character-article-div-div-ul">
@@ -55,7 +58,7 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-            Padre
+          {t("main.infoFather")}
           </h1>
           <div className="section2-article-character-article-div-div">
             <ul className="section2-article-character-article-div-div-ul">
@@ -72,7 +75,7 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-            Descendientes
+          {t("main.infoDecendents")}
           </h1>
           <div className="section2-article-character-article-div-div">
             <ul className="section2-article-character-article-div-div-ul">
@@ -89,7 +92,7 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-            Titulos
+          {t("main.infoTitles")}
           </h1>
           <div className="section2-article-character-article-div-div div-titles">
             <ul className="section2-article-character-article-div-div-ul">
@@ -111,7 +114,7 @@ export function CharacterInfo({ houseData, ...data }) {
       <>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-            Casa
+          {t("main.infoHome")}
           </h1>
           <div className="section2-article-character-article-div-div">
             <ul className="section2-article-character-article-div-div-ul">
@@ -124,7 +127,7 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-            Alianzas
+          {t("main.infoAlliances")}
           </h1>
           <div className="section2-article-character-article-div-div">
             <ul className="section2-article-character-article-div-div-ul">
@@ -141,7 +144,7 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-            Apariciones
+          {t("main.infoAppearances")}
           </h1>
           <div className="section2-article-character-article-div-div">
             <ul className="section2-article-character-article-div-div-ul div-episodes">
@@ -158,7 +161,7 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-            Padre
+          {t("main.infoFather")}
           </h1>
           <div className="section2-article-character-article-div-div">
             <ul className="section2-article-character-article-div-div-ul">
@@ -175,7 +178,7 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-            Descendientes
+          {t("main.infoDecendents")}
           </h1>
           <div className="section2-article-character-article-div">
             <ul className="section2-article-character-article-div-div-ul">
@@ -192,7 +195,7 @@ export function CharacterInfo({ houseData, ...data }) {
         </div>
         <div className="section2-article-character-article-div">
           <h1 className="section2-article-character-article-div-titulos">
-            Titulos
+          {t("main.infoTitles")}
           </h1>
           <div className="section2-article-character-article-div-div div-titles">
             <ul className="section2-article-character-article-div-div-ul">
