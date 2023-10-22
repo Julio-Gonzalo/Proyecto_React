@@ -13,7 +13,7 @@ import "./style/MenuHeader.scss";
 function BackButton({ clearSelection }) {
   const [t] = useTranslation("global");
   return (
-    <div className="header-div-personajes">
+    <div className="header-div-info">
       <img
         src={atrasLogo}
         alt="Logo-Atrás"
@@ -83,50 +83,61 @@ export function MenuHeader({
 
   const { pathname } = useLocation();
 
-  return (
-    <>
-      <header className="header">
-        {pathname === "/" && <div className="div-vacio"></div>}
-
-        {pathname === "/personajes" && (
-          <div className="div-input">
-            <div className="input-img">
-              <img src={inputLogo} alt="Icono-Input" className="img" />
+  if (isCharacterInfo === false || isHouseDetails === false) {
+    return (
+      <>
+        <header className="header">
+          {pathname === "/" && <div className="div-vacio"></div>}
+          {pathname === "/personajes" && (
+            <div className="div-input">
+              <div className="input-img">
+                <img src={inputLogo} alt="Icono-Input" className="img" />
+              </div>
+              <input
+                type="text"
+                placeholder="  Buscar..."
+                value={filter}
+                onChange={filteredChange}
+                className="input"
+                size={40}
+              />
             </div>
-            <input
-              type="text"
-              placeholder="  Buscar..."
-              value={filter}
-              onChange={filteredChange}
-              className="input"
-              size={40}
-            />
-          </div>
-        )}
-
-        {pathname === "/casas" && (
-          <div className="div-input">
-            <div className="input-img">
-              <img src={inputLogo} alt="Icono-Input" className="img" />
+          )}
+          {pathname === "/casas" && (
+            <div className="div-input">
+              <div className="input-img">
+                <img src={inputLogo} alt="Icono-Input" className="img" />
+              </div>
+              <input
+                type="text"
+                placeholder="  Buscar..."
+                value={filter}
+                onChange={filteredChange}
+                className="input"
+                size={40}
+              />
             </div>
-            <input
-              type="text"
-              placeholder="  Buscar..."
-              value={filter}
-              onChange={filteredChange}
-              className="input"
-              size={40}
-            />
-          </div>
-        )}
-
-        {pathname === "/cronologia" && <div className="div-vacio"></div>}
-
-        {isCharacterInfo || isHouseDetails ? (
-          <BackButton clearSelection={clearSelection} />
-        ) : null}
-        <LanguageMenu />
-      </header>
-    </>
-  );
+          )}
+          {pathname === "/cronologia" && <div className="div-vacio"></div>}
+          {isCharacterInfo || isHouseDetails ? (
+            <BackButton clearSelection={clearSelection} />
+          ) : null}
+          <LanguageMenu />
+        </header>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <header className="header">
+          {pathname === "/" && <div className="div-vacio"></div>}
+          {pathname === "/cronologia" && <div className="div-vacio"></div>}
+          {isCharacterInfo || isHouseDetails ? (
+            <BackButton clearSelection={clearSelection} />
+          ) : null}
+          <LanguageMenu />
+        </header>
+      </>
+    );
+  }
 }
