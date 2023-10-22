@@ -1,7 +1,7 @@
+import { MenuFooter } from "../../componentes/MenuFooter/MenuFooter";
 import { MenuHeader } from "../../componentes/MenuHeader/MenuHeader";
 import "./HomePage.css";
 import { useTranslation } from "react-i18next";
-
 
 export function HomePage() {
   const [t] = useTranslation("global");
@@ -15,6 +15,7 @@ export function HomePage() {
           </div>
         </section>
       </main>
+      <MenuFooter />
     </>
   );
 }

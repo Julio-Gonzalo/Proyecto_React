@@ -1,3 +1,27 @@
+.header {
+
+    width: 100vw;
+    height: 5vh;
+
+    .header-div-idioma-home {
+
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        padding-right: 5%;
+
+    }
+
+    .div-vacio {
+
+        width: 50%;
+        height: 100%;
+
+    }
+}
+
 .main-home {
 
     width: 100vw;

@@ -3,6 +3,7 @@ import axios from "axios";
 import "./styleChrono.css";
 import "./styles/ChronologyPage.scss";
 import { MenuHeader } from "../../componentes/MenuHeader/MenuHeader";
+import { MenuFooter } from "../../componentes/MenuFooter/MenuFooter";
 
 export function ChronologyPage() {
   const [characters, setCharacters] = useState([]);
@@ -83,6 +84,7 @@ export function ChronologyPage() {
           </section>
         </div>
       </main>
+      <MenuFooter />
     </>
   );
 }

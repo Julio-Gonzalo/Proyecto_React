@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { MenuHeader } from "../../componentes/MenuHeader/MenuHeader";
 import { useTranslation } from "react-i18next";
+import { MenuFooter } from "../../componentes/MenuFooter/MenuFooter";
 
-export function Gallery({ data }) {
+export function Gallery({ data, functionFilter }) {
   const [t] = useTranslation("global");
   const [selectedHouses, setSelectedHouses] = useState(null);
 
@@ -16,7 +17,11 @@ export function Gallery({ data }) {
 
   return (
     <>
-      <MenuHeader clearSelection={clearSelection} isHouseDetails={!!selectedHouses} />
+      <MenuHeader
+        clearSelection={clearSelection}
+        isHouseDetails={!!selectedHouses}
+        functionFilter={functionFilter}
+      />
       <main className="main-houses">
         {selectedHouses ? (
           <section className="section2-houses">
@@ -34,7 +39,7 @@ export function Gallery({ data }) {
               <article className="section2-houses-article-houses-article">
                 <div className="section2-houses-article-houses-article-div">
                   <h1 className="section2-houses-article-houses-article-div-titulos">
-                  {t("main.infoSettlement")} 
+                    {t("main.infoSettlement")}
                   </h1>
                   <ul className="section2-houses-article-houses-article-div-ul">
                     <li className="section2-houses-article-houses-article-div-ul-li">
@@ -44,7 +49,7 @@ export function Gallery({ data }) {
                 </div>
                 <div className="section2-houses-article-houses-article-div">
                   <h1 className="section2-houses-article-houses-article-div-titulos">
-                  {t("main.infoRegion")}
+                    {t("main.infoRegion")}
                   </h1>
                   <ul className="section2-houses-article-houses-article-div-ul">
                     <li className="section2-houses-article-houses-article-div-ul-li">
@@ -54,7 +59,7 @@ export function Gallery({ data }) {
                 </div>
                 <div className="section2-houses-article-houses-article-div">
                   <h1 className="section2-houses-article-houses-article-div-titulos">
-                  {t("main.infoAlliances")}
+                    {t("main.infoAlliances")}
                   </h1>
                   <ul className="section2-houses-article-houses-article-div-ul">
                     {selectedHouses.alliances.map((alliance, index) => (
@@ -69,7 +74,7 @@ export function Gallery({ data }) {
                 </div>
                 <div className="section2-houses-article-houses-article-div">
                   <h1 className="section2-houses-article-houses-article-div-titulos">
-                  {t("main.infoReligions")}
+                    {t("main.infoReligions")}
                   </h1>
                   <ul className="section2-houses-article-houses-article-div-ul">
                     {selectedHouses.religions.map((religions, index) => (
@@ -84,7 +89,7 @@ export function Gallery({ data }) {
                 </div>
                 <div className="section2-houses-article-houses-article-div">
                   <h1 className="section2-houses-article-houses-article-div-titulos">
-                  {t("main.infoFoundation")}
+                    {t("main.infoFoundation")}
                   </h1>
                   <ul className="section2-article-houses-article-div-ul">
                     <li className="section2-article-houses-article-div-ul-li">
@@ -117,6 +122,7 @@ export function Gallery({ data }) {
           </section>
         )}
       </main>
+      <MenuFooter />
     </>
   );
 }

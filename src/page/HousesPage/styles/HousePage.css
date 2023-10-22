@@ -12,7 +12,7 @@
   display: grid;
   place-items: center;
   overflow-y: auto;
-  grid-template-columns: repeat(5, 260px);
+  grid-template-columns: repeat(5, 300px);
   gap: 45px;
 }
 .main-houses .section-houses::-webkit-scrollbar {

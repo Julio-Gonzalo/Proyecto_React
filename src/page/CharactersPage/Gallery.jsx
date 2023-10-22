@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CharacterInfo } from "./CharacterInfo";
 import { MenuHeader } from "../../componentes/MenuHeader/MenuHeader";
+import { MenuFooter } from "../../componentes/MenuFooter/MenuFooter";
 
 export function Gallery({ data, houseData, functionFilter }) {
   const [selectedCharacter, setSelectedCharacter] = useState(null);
@@ -61,6 +62,7 @@ export function Gallery({ data, houseData, functionFilter }) {
           </section>
         )}
       </main>
+      <MenuFooter />
     </>
   );
 }

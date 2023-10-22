@@ -1,11 +1,13 @@
-import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import "./style/MenuHeader.scss";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import React, { useState } from "react";
 import esLogo from "./assets/spain.png";
 import enLogo from "./assets/united-kingdom.png";
 import atrasLogo from "./assets/arrow.png";
 import homeLogo from "./assets/home.png";
-import { Link } from "react-router-dom";
+import inputLogo from "./assets/search.png";
+import "./style/MenuHeader.scss";
 
 // Componente para el botón "Volver"
 function BackButton({ clearSelection }) {
@@ -79,19 +81,51 @@ export function MenuHeader({
     functionFilter(event.target.value);
   };
 
+  const { pathname } = useLocation();
+
   return (
     <>
-      <header className="header-personajes">
+      <header className="header">
+        {pathname === "/" && <div className="div-vacio"></div>}
+
+        {pathname === "/personajes" && (
+          <div className="div-input">
+            <div className="input-img">
+              <img src={inputLogo} alt="Icono-Input" className="img" />
+            </div>
+            <input
+              type="text"
+              placeholder="  Buscar..."
+              value={filter}
+              onChange={filteredChange}
+              className="input"
+              size={40}
+            />
+          </div>
+        )}
+
+        {pathname === "/casas" && (
+          <div className="div-input">
+            <div className="input-img">
+              <img src={inputLogo} alt="Icono-Input" className="img" />
+            </div>
+            <input
+              type="text"
+              placeholder="  Buscar..."
+              value={filter}
+              onChange={filteredChange}
+              className="input"
+              size={40}
+            />
+          </div>
+        )}
+
+        {pathname === "/cronologia" && <div className="div-vacio"></div>}
+
         {isCharacterInfo || isHouseDetails ? (
           <BackButton clearSelection={clearSelection} />
         ) : null}
         <LanguageMenu />
-        <input
-          type="text"
-          placeholder="Buscar..."
-          value={filter}
-          onChange={filteredChange}
-        />
       </header>
     </>
   );

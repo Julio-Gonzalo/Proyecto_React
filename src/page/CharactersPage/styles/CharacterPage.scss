@@ -1,3 +1,45 @@
+.header {
+
+          width: 100vw;
+          height: 5vh;
+
+          .div-input {
+
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 7.5%;
+
+                    .input-img {
+
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              align-content: center;
+                              
+                              .img {
+                                        
+                                        width: 15px;
+                                        height: 15px;
+                                        border: none;
+                                        border-bottom: 1px solid white;        
+
+                              }
+                    }
+
+                    .input {
+
+                              background-color: transparent;
+                              border: none;
+                              border-bottom: 1px solid white;
+                              outline: none;
+                              color: white;
+
+                    }
+          }
+}
+
 .main-characters {
           width: 100vw;
           height: 90vh;
@@ -13,7 +55,7 @@
                     display: grid;
                     place-items: center;
                     overflow-y: auto;
-                    grid-template-columns: repeat(5, 260px);
+                    grid-template-columns: repeat(5, 280px);
                     gap: 45px;
                     
                     &::-webkit-scrollbar {

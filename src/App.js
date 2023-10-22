@@ -4,7 +4,6 @@ import { ChronologyPage } from "./page/ChronologyPage/ChronologyPage";
 import { HousesPage } from "./page/HousesPage/HousesPage";
 import { CharactersPage } from "./page/CharactersPage/CharactersPage";
 import { HomePage } from "./page/HomePage/HomePage";
-import { MenuFooter } from "./componentes/MenuFooter/MenuFooter";
 import { useState } from "react";
 
 function App() {
@@ -34,7 +33,6 @@ function App() {
           <Route path="/" element={<HomePage />} />
         </Routes>
       </>
-      <MenuFooter />
     </Router>
   );
 }
