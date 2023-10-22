@@ -1,0 +1,31 @@
+.main-home {
+
+    width: 100vw;
+    height: 90vh;
+
+    .body {
+        width: 100%;
+        height: 100%;
+        background-image:url( "./assets/game-of-thrones-poster.jpg");
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .imagen {
+        height: 90vh;
+        width: 100vw;
+        background-image: transparent;
+    }
+    .letra {
+        color: white;
+        font-size: 100px;
+        
+    }
+    .pepe {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+}

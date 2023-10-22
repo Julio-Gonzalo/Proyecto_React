@@ -1,4 +1,4 @@
-.header-personajes {
+.header {
   width: 100vw;
   height: 5vh;
   display: flex;
@@ -7,12 +7,21 @@
   background-color: #282c34;
   font-family: Verdana;
 }
-.header-personajes .header-div-personajes {
+.header .header-characters-div-characters {
   display: flex;
   align-items: center;
   color: white;
   padding-left: 10%;
 }
-.header-personajes .header-div-idioma-home {
+.header .header-characters-div-idioma-home {
+  padding-right: 10%;
+}
+.header .header-houses-div-houses {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding-left: 10%;
+}
+.header .header-houses-div-idioma-home {
   padding-right: 10%;
 }/*# sourceMappingURL=MenuHeader.css.map */

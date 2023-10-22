@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./styleChrono.css";
+import "./styles/ChronologyPage.scss";
 import { MenuHeader } from "../../componentes/MenuHeader/MenuHeader";
 
 export function ChronologyPage() {
@@ -51,33 +52,35 @@ export function ChronologyPage() {
   return (
     <>
       <MenuHeader />
-      <main className="main">
-        <div
-          className="container"
-          style={{ height: "50vh", overflowY: "auto" }}
-        >
-          <button
-            onClick={() => setAscendente(!ascendente)}
-            className="circle-button"
-          >
-            {getButtonText()}
-          </button>
-          <ul className="timeline">
-            {characters.map((character, index) => (
-              <li key={character._id} className="timeline-item">
-                <div className="timeline-content">
-                  <img
-                    src={`http://localhost:3000/${character.image}`}
-                    alt={character.name}
-                  />
-                  <div>
-                    <p className="name">{character.name}</p>
-                    <p className="age">Edad: {character.age}</p>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
+      <main className="main-chronology">
+        <div className="cesar">
+          <section className="scroll">
+            <div className="container">
+              <button
+                onClick={() => setAscendente(!ascendente)}
+                className="circle-button"
+              >
+                {getButtonText()}
+              </button>
+              <ul className="timeline">
+                {characters.map((character, index) => (
+                  <li key={index} className="timeline-item">
+                    <div className="timeline-content">
+                      <div className="pepito">
+                        <p className="age">{character.age}</p>
+                        <p className="name">{character.name}</p>
+                      </div>
+                      <img
+                        className="imagen"
+                        src={`http://localhost:3000/${character.image}`}
+                        alt={character.name}
+                      />
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
         </div>
       </main>
     </>

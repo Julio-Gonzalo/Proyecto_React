@@ -17,10 +17,10 @@ export function MenuHeader({ clearSelection }) {
 
   return (
     <>
-      <header className="header-personajes">
+      <header className="header">
         {pathname === "/personajes" && (
           <>
-            <div className="header-div-personajes">
+            <div className="header-characters-div-characters">
               <img
                 src={atrasLogo}
                 alt="Logo-Atrás"
@@ -33,7 +33,7 @@ export function MenuHeader({ clearSelection }) {
               />
               <span>Volver</span>
             </div>
-            <div className="header-div-idioma-home">
+            <div className="header-characters-div-idioma-home">
               <Link to="/">
                 <img
                   src={homeLogo}
@@ -67,7 +67,7 @@ export function MenuHeader({ clearSelection }) {
 
         {pathname === "/casas" && (
           <>
-            <div className="header-div-personajes">
+            <div className="header-houses-div-houses">
               <img
                 src={atrasLogo}
                 alt="Logo-Atrás"
@@ -80,7 +80,7 @@ export function MenuHeader({ clearSelection }) {
               />
               <span>Volver</span>
             </div>
-            <div className="header-div-idioma-home">
+            <div className="header-houses-div-idioma-home">
               <Link to="/">
                 <img
                   src={homeLogo}
@@ -114,7 +114,7 @@ export function MenuHeader({ clearSelection }) {
 
         {pathname === "/cronologia" && (
           <>
-            <div className="header-div-idioma-home">
+            <div className="header-div-chronology">
               <Link to="/">
                 <img
                   src={homeLogo}
@@ -148,7 +148,7 @@ export function MenuHeader({ clearSelection }) {
 
         {pathname === "/" && (
           <>
-            <div className="header-div-idioma">
+            <div className="header-div-idioma-home">
               <img
                 src={esLogo} // Ruta de la imagen para el español
                 alt="Español"
