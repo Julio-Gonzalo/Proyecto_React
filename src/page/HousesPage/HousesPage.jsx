@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Gallery } from "./Gallery";
 import "./styles/HousePage.scss";
 
-export function HousesPage() {
+export function HousesPage({ filter }) {
   const [houses, setHouses] = useState([]);
 
   useEffect(() => {
@@ -15,9 +15,13 @@ export function HousesPage() {
     getHouses();
   }, []);
 
+  const filteredHouses = houses.filter((character) =>
+  character.name && character.name.toLowerCase().includes(filter.toLowerCase())
+);
+
   return (
     <>
-      <Gallery data={houses} />;
+      <Gallery data={filteredHouses} />;
     </>
   );
 }

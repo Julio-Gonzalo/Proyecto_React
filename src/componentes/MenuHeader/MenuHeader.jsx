@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./MenuHeader.scss";
 import esLogo from "./assets/spain.png";
 import enLogo from "./assets/united-kingdom.png";
 
-export function MenuHeader() {
-  // eslint-disable-next-line
-  const [t, i18n] = useTranslation();
+export function MenuHeader({ onFilterChange }) {
+  const [, i18n] = useTranslation();
   const changeLanguage = (language) => i18n.changeLanguage(language);
+  const [filter, setFilter] = useState(""); // Nuevo estado para el filtro
+
+  const handleFilterChange = (event) => {
+    setFilter(event.target.value);
+    onFilterChange(event.target.value); // Llama a la función de filtrado en el componente padre
+  };
 
   return (
     <>
       <header className="header">
+        <input
+          type="text"
+          placeholder="Buscar..."
+          value={filter}
+          onChange={handleFilterChange}
+        />
+        
         <img
           src={esLogo} // Ruta de la imagen para el español
           alt="Español"
