@@ -1,0 +1,10 @@
+.imagen {
+    background: transparent;
+    height: 90vh;
+    width: 100vw;
+}
+.letra {
+    color: white;
+    font-size: 100px;
+    position: absolute;
+}

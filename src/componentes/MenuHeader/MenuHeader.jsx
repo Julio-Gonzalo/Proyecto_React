@@ -15,13 +15,13 @@ export function MenuHeader() {
         <img
           src={esLogo} // Ruta de la imagen para el español
           alt="Español"
-          style={{ cursor: "pointer", width: "30px", marginRight: "10px" }}
+          style={{ cursor: "pointer", width: "64px", marginRight: "10px" }}
           onClick={() => changeLanguage("es")}
         />
         <img
           src={enLogo} // Ruta de la imagen para el inglés
           alt="English"
-          style={{ cursor: "pointer", width: "30px" }}
+          style={{ cursor: "pointer", width: "64px" }}
           onClick={() => changeLanguage("en")}
         />
       </header>

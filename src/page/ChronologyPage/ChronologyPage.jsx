@@ -54,11 +54,11 @@ export function ChronologyPage() {
         {characters.map((character, index) => (
           <li key={character._id} className="timeline-item">
             <div className="timeline-content">
-              <img src={`http://localhost:3000/${character.image}`} alt={character.name} />
               <div>
                 <p className="name">{character.name}</p>
                 <p className="age">Edad: {character.age}</p>
               </div>
+              <img src={`http://localhost:3000/${character.image}`} alt={character.name} />
             </div>
           </li>
         ))}
