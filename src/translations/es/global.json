@@ -1,0 +1,20 @@
+{
+  "main": {
+    "hometitle": "JUEGO DE TRONOS",
+    "menuHome": "Inicio",
+    "menuCharacters": "Personajes",
+    "menuHouses": "Casas",
+    "menuTimeline": "Cronologia",
+    "infoHome": "Casa",
+    "infoAlliances": "Alianzas",
+    "infoAppearances": "Apariciones",
+    "infoFather": "Padre",
+    "infoDecendents": "Descendientes",
+    "infoTitles": "Titulos",
+    "infoSettlement": "Sede",
+    "infoRegion": "Region",
+    "infoReligions": "Religiones",
+    "infoFoundation": "Fundacion",
+    "buttonback": "Volver"
+  }
+}

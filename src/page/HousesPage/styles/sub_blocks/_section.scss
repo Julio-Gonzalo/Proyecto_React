@@ -1,0 +1,28 @@
+.section-houses-article {
+
+          width: 100%;
+          height: 100%;
+
+          .section-houses-article-div {
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+          }
+
+                    .section-houses-article-div-img {
+
+                              width: 248px;
+                              height: 320px;
+                              object-fit: cover;
+                              padding-bottom: 20px;
+
+                    }
+                  
+                    .section-houses-article-div-span {
+
+                              color: white;
+
+                    }
+}
